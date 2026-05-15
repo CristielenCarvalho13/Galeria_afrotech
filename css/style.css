@@ -1,0 +1,223 @@
+/* ==========================================================================
+   CONFIGURAÇÕES GERAIS
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0A0A0A;
+    color: #F5F5F5;
+    font-family: 'Poppins', sans-serif;
+    padding-top: 70px; /* espaço para o menu fixo no topo */
+}
+
+/* ==========================================================================
+   COMPONENTES DE NAVEGAÇÃO
+   ========================================================================== */
+.logo {
+    font-family: 'Orbitron', sans-serif;
+    color: #00D9FF !important;
+    font-weight: bold;
+}
+
+.sombra-navbar {
+    box-shadow: 0 0 15px #6A00FF;
+}
+
+/* ==========================================================================
+   SEÇÃO BANNER (HERO)
+   ========================================================================== */
+.banner {
+    position: relative;
+    min-height: calc(100vh - 70px);
+    padding-top: 70px;
+    background-image: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.80)), 
+                      url('../img/banner.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+}
+
+.banner-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0,0,0,0.2), rgba(0,0,0,0.6));
+    z-index: 1;
+}
+
+.conteudo-banner {
+    position: relative;
+    z-index: 2;
+    max-width: 700px;
+    margin: 0 auto;
+    padding-top: 100px;
+    text-align: center;
+}
+
+.titulo-principal {
+    font-size: 5rem;
+    color: #00D9FF;
+    font-family: 'Orbitron', sans-serif;
+    text-shadow: 0 0 20px #00D9FF;
+    margin-bottom: 20px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.titulo-principal span {
+    display: block;
+}
+
+.subtitulo {
+    font-size: 1.3rem;
+    line-height: 1.8;
+    color: #F5F5F5;
+    margin-top: 20px; /* Ajustado para consistência */
+}
+
+/* ==========================================================================
+   ELEMENTOS DE INTERAÇÃO (BOTÕES)
+   ========================================================================== */
+.btn-neon {
+    background-color: #6A00FF;
+    color: white;
+    border: none;
+    padding: 18px 40px;
+    font-size: 1.15rem;
+    transition: 0.3s;
+}
+
+.btn-neon:hover {
+    background-color: #00D9FF;
+    color: white;
+    transform: scale(1.05);
+}
+
+/* ==========================================================================
+   SEÇÕES E CONTEÚDO
+   ========================================================================== */
+.titulo-secao {
+    color: #FFD166;
+    font-family: 'Orbitron', sans-serif;
+    padding-top: 50px;
+}
+
+.newsletter {
+    background: linear-gradient(90deg, #111111, #1A1A1A);
+    border-top: 1px solid #6A00FF;
+    border-bottom: 1px solid #00D9FF;
+}
+
+.newsletter p {
+    color: #CCCCCC;
+}
+
+/* ==========================================================================
+   CARDS E SERVIÇOS
+   ========================================================================== */
+.card-arte {
+    background-color: #111111;
+    border: 1px solid #6A00FF;
+    transition: 0.4s;
+}
+
+.card-arte:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px #00D9FF;
+}
+
+.card-title {
+    color: #00D9FF;
+}
+
+/* ==========================================================================
+   FORMULÁRIOS
+   ========================================================================== */
+.formulario {
+    background-color: #111111;
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.form-control {
+    background-color: #222;
+    border: 1px solid #6A00FF;
+    color: white;
+}
+
+.form-control:focus {
+    background-color: #222;
+    color: white;
+    border-color: #00D9FF;
+    box-shadow: none;
+}
+
+/* ==========================================================================
+   RODAPÉ E AUXILIARES
+   ========================================================================== */
+.footer {
+    background-color: #000;
+}
+
+.py-top {
+    padding-top: 120px;
+}
+
+/* ==========================================================================
+   CARROSSEL (HOME - ARTES DESTAQUE)
+   ========================================================================== */
+.carousel {
+    overflow: hidden;
+    max-width: 1019px;
+    margin: 0 auto;
+}
+
+.carousel-inner {
+    width: 100%;
+}
+
+.carousel-item img {
+    width: 1019px;
+    height: 408px;
+    max-width: 100%;
+    object-fit: cover;
+    object-position: center center;
+    display: block;
+    margin: 0 auto;
+}
+
+/* ==========================================================================
+   RESPONSIVIDADE (MEDIA QUERIES)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .titulo-principal {
+        font-size: 2.5rem;
+    }
+
+    .banner {
+        height: 80vh;
+    }
+    
+    .conteudo-banner {
+        padding-right: 15px; /* Melhor ajuste para telas pequenas */
+        text-align: center;
+        margin-right: auto;
+    }
+}
